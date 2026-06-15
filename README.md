@@ -6,8 +6,8 @@
 > Evaluación de RA1, RA4, RA5 y RA6.
  
 ---
-**Nombre:** [Nombre del alumno]
-**RA de los que te examinas:** [RA de los que te examinas. Ojo, no confundas RAs con Unidad]
+**Nombre:** Antonio Manuel Pérez Gómez
+**RA de los que te examinas:** RA4
 ---
 
 
@@ -50,6 +50,15 @@ Kotlin es un lenguaje de **alto nivel**, normalmente **compilado a bytecode** pa
 
 *Respuesta a la pregunta 8. (mínimo 200 palabras)*
 
+Las áreas principales utilizadas para gestionar los cambios de un proyecto son: El directorio de trabajo, el staging area y el repositorio.
+
+El directorio de trabajo es donde yo manipulo los archivos en remoto, realizo cambios dentro de ellos y decido si subirlos o no al staging area. Este directorio suele existir de manera local y se suele trabajar de manera que se clona el repositorio remoto en tu máquina local y se empiezan a realizar cambios.
+
+El staging area es la mesa donde se muestran los cambios y se preparan para enviar al repositorio, en esta mesa, con comandos como `git add` y `git commit`, se ven los archivos con los que se ha trabajado en el directorio y se pueden ver sus cambios ya sea con una herramienta implementada en el IDE que el usuario haya utilizado o con el comando `git log --oneline` con el que dependes más de tus mensajes de commit que hayas indicado durante tu proceso de trabajo.
+
+Por último, el repositorio es la parte donde se suben los cambios, suele ser remoto y en este caso lo vemos a través de GitHub. Esta es la parte final del proceso y donde vemos todos los cambios ya revisados anteriormente en el staging area aplicados. 
+
+De esta manera, Git facilita la gestión de cambios en un proyecto y apoya al usuario con no solo estas herramientas, sino otras más las cuales son directamente unas mejoras a esta estructura de tres mesas (Trabajo, revisión, venta del producto). 
 
 ---
 
@@ -63,34 +72,34 @@ Ejemplo de respuesta:
 *Responde a las siguientes situaciones:*
 
 1. Ver el historial de commits en una sola línea.
-    + comando: 
+    + comando: `git log --oneline`
    
 2. Deshacer el último commit y deshacer cambios. Eliminar los cambios.
-    + comando:
+    + comando: `git reset --HARD HEAD~1`
 
 3. Crear la rama `featureA` y cambiar a ella.
-    + comando:
+    + comando: `git checkout -b featureA`
 
 4. Ver el estado del repositorio.
-    + comando:
+    + comando: `git status`
 
 5. Clonar el repositorio `https://github.com/revilofe/HundirFlota.git`.
-    + comando:
+    + comando: `git clone https://github.com/revilofe/HundirFlota.git`.
 
 6. Descargar al repositorio local los cambios del remote `origin` rama `main`.
-    + comando:
+    + comando: `git pull origin main`
 
 7. Subir los cambios del repositorio local al remote `origin` rama `main`.
-    + comando:
+    + comando: `git push origin main`
 
 8. Combinar la rama `featureA` con la rama principal.
-    + comando:
+    + comando: (Estando en main) `git merge featureA` 
 
 9. Aplicar rebase a la rama `featureA` con la rama principal.
-    + comando:
+    + comando: (Estando en featureA) `git rebase main`
 
 10. Continuar el rebase de la rama `featureA` con la rama principal, una vez resueltos los conflictos.
-    + comando: 
+    + comando: `git rebase continue`
 
 ---
 
